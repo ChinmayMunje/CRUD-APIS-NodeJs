@@ -1,0 +1,43 @@
+<%- include('header') %>
+
+<div class="container mt-5">
+  <h1>Welcome to Course Page</h1>
+  <form action="/createCourse" method="POST" class="addBtn addCourseClass">
+    <button type="submit" class="btn btn-dark">Add New Course</button>
+  </form>
+
+  <% for(var i=0; i<courseList.length; i++){ %>
+  <div class="col-sm-12 col-lg-12 mb-12 listDiv">
+    <div class="card text-center">
+      <div class="card-body">
+        <img class="courseImg" src="<%=courseList[i].courseImg%>" alt="<%=courseList[i].courseName%>">
+
+        <h5 class="card-title card-txt">Course Name : <%=courseList[i].courseName%></h5>
+        <p class="card-txt">Course Duration : <%=courseList[i].courseDuration%></p>
+        <p class="card-txt">Course Price : <%=courseList[i].coursePrice%></p>
+
+        <div class="card-buttons">
+          <form action="/updateCoursePage" method="POST" class="addCourseClass">
+            <button type="submit" class="btn btn-dark cdBtn" name="courseID" value="<%=courseList[i].id%>">Update Course</button>
+          </form>
+
+          <form action="/deleteCourseWeb" method="POST" class="addCourseClass">
+            <button type="submit" class="btn btn-dark cdBtn" name="courseID" value="<%=courseList[i].id%>">Delete Course</button>
+          </form>
+
+          <form action="/viewCourseWeb" method="POST" class="addCourseClass">
+            <button type="submit" class="btn btn-dark cdBtn" name="courseLink" value="<%= courseList[i].courseLink%>">View Course</button>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <% } %>
+
+</div>
+
+
+
+<%- include('footer') %>

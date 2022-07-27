@@ -1,0 +1,53 @@
+
+body {
+  background-color: #E8ECEF;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+h1{
+  margin-left: 23px;
+}
+.addBtn{
+  float: right;
+  margin-top: -50px;
+  margin-right: 20px;
+}
+
+.courseImg{
+  width: 100%;
+  height: 50%;
+  margin-right: 10px;
+}
+
+.card-txt{
+  text-align: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.cdBtn{
+  width: 130px;
+  margin: 5px;
+}
+.addCourseClass{
+  float: right;
+}
+
+.card-buttons{
+  float: right;
+  margin-right: 20px;
+  margin-top: -115px;
+}
+.listDiv{
+  width: 100%;
+  margin-top: 25px;
+}
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
